@@ -9,9 +9,9 @@
     "typecheck": "tsc --project tsconfig.json --noEmit",
     "lint": "eslint src --max-warnings=0",
     "test": "jest",
-    "test:watch": "yarn test --watch",
-    "test:coverage": "yarn test --coverage --detectOpenHandles",
-    "test:coverage:text": "yarn test --coverageReporters='text-summary'"
+    "test:watch": "pnpm test --watch",
+    "test:coverage": "pnpm test --coverage --detectOpenHandles",
+    "test:coverage:text": "pnpm test --coverageReporters='text-summary'"
   },
   "husky": {
     "hooks": {
@@ -20,8 +20,8 @@
   },
   "lint-staged": {
     "src/**/*": [
-      "yarn lint --fix",
-      "yarn test --findRelatedTests --bail --passWithNoTests"
+      "pnpm lint --fix",
+      "pnpm test --findRelatedTests --bail --passWithNoTests"
     ]
   },
   "dependencies": {
